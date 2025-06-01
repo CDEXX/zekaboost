@@ -34,395 +34,165 @@
     <noscript><a href="https://www.livechat.com/chat-with/19163655/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
     <!-- End of LiveChat code -->
     
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.css">
-    <!-- jQuery CDN -->
+    
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.3/dist/sweetalert2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        particlesJS("particles-js", {
-            particles: {
-                number: {
-                    value: 160,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: "#ffffff"
-                },
-                shape: {
-                    type: "circle"
-                },
-                opacity: {
-                    value: 1,
-                    random: true,
-                    anim: {
-                        enable: true,
-                        speed: 1,
-                        opacity_min: 0,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false
-                    }
-                },
-                line_linked: {
-                    enable: false
-                },
-                move: {
-                    enable: true,
-                    speed: 0.5,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: {
-                        enable: false
-                    },
-                    onclick: {
-                        enable: false
-                    },
-                    resize: true
-                }
-            },
-            retina_detect: true
-        });
-    });
-    </script>
-
-    <style>
-       .cart-sidebar {
-    width: 300px;
-    background: #11152a;
-    color: white;
-    position: fixed;
-    right: -300px;
-    top: 0;
-    height: 100%;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    z-index: 1050;
-    transition: right 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
-}
-
-.cart-sidebar.open {
-    right: 0;
-}
-
-.cart-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #333;
-}
-
-.cart-body {
-    overflow-y: auto;
-    flex-grow: 1;
-    padding: 10px;
-}
-
-.cart-footer {
-    padding: 10px;
-    border-top: 1px solid #333;
-    background-color: #0c0f20;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cart-footer .total {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.navbar .dropdown-menu {
-    border: none;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.navbar .dropdown-item {
-    padding: 0.5rem 1rem;
-}
-
-.navbar .dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.navbar .nav-link {
-    padding: 0.5rem 1rem;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 1);
-}
-
-.particles-container {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    pointer-events: none;
-}
-
-/* Ensure content appears above particles */
-.site-wrapper {
-    position: relative;
-    z-index: 1;
-}
-
-.text-gradient {
-    background: linear-gradient(90deg, #5e17eb, #a547ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.btn-primary {
-    background: linear-gradient(90deg, #5e17eb, #a547ff);
-    border: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-primary::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transform: translateX(-100%);
-}
-
-.btn-primary:hover::after {
-    transform: translateX(100%);
-    transition: transform 0.6s;
-}
-    </style>
-
-<script>
-$(document).ready(function() {
-    // Dropdown toggle
-    $('.game-selector .dropdown-toggle').on('click', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        $(this).parent().find('.dropdown-menu').toggleClass('show');
-    });
-
-    // Close dropdown when clicking elsewhere on the page
-    $(document).on('click', function(e) {
-        if (!$(e.target).closest('.game-selector').length) {
-            $('.game-selector .dropdown-menu').removeClass('show');
-        }
-    });
-
-    // Game selection
-    $('.game-item').on('click', function() {
-        if (!$(this).hasClass('disabled')) {
-            const gameIcon = $(this).find('img').attr('src');
-            const gameName = $(this).find('span').text();
-            
-            // Update dropdown toggle content
-            $('.game-selector .dropdown-toggle svg').hide();
-            $('.game-selector .dropdown-toggle')
-                .html(`<img src="${gameIcon}" class="game-icon me-2" style="width: 24px; height: 24px;">
-                       <span>${gameName}</span>`);
-            
-            // Close dropdown
-            $('.game-selector .dropdown-menu').removeClass('show');
-        }
-    });
-});
-</script>
     
+    <!-- Custom Scripts -->
+    <script src="assets/js/main.js"></script>
 </head>
-
 <body>
+    <div id="particles-js" class="particles-container"></div>
 
-<div id="particles-js" class="particles-container"></div>
-
-<!-- Language and Currency Selection Modal -->
-<div class="modal fade" id="selectionModal" tabindex="-1" aria-labelledby="selectionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content" style="background-color: #1d2551; color: white; border-radius: 10px;">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="selectionModalLabel" style="font-weight: bold;">Language and Currency Settings</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row">
-                    <!-- Language Selection -->
-                    <div class="col-12 mb-4">
-                        <h6 class="mb-3">Select Language</h6>
-                        <div class="d-flex justify-content-around">
-                        <button class="btn btn-outline-light" id="tr_modal">
-                            <img src="https://flagicons.lipis.dev/flags/4x3/tr.svg" alt="Turkish" style="width: 24px;" class="me-2">Turkish
-                        </button>
-                        <button class="btn btn-outline-light" id="en_modal">
-                            <img src="https://flagicons.lipis.dev/flags/4x3/us.svg" alt="English" style="width: 24px;" class="me-2">English
-                        </button>
-                        <button class="btn btn-outline-light" id="de_modal">
-                            <img src="https://flagicons.lipis.dev/flags/4x3/de.svg" alt="Deutsch" style="width: 24px;" class="me-2">Deutsch
-                        </button>
-                        <button class="btn btn-outline-light" id="ru_modal">
-                            <img src="https://flagicons.lipis.dev/flags/4x3/ru.svg" alt="Russian" style="width: 24px;" class="me-2">Russian
-                        </button>
+    <!-- Language and Currency Selection Modal -->
+    <div class="modal fade" id="selectionModal" tabindex="-1" aria-labelledby="selectionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #1d2551; color: white; border-radius: 10px;">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="selectionModalLabel" style="font-weight: bold;">Language and Currency Settings</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <!-- Language Selection -->
+                        <div class="col-12 mb-4">
+                            <h6 class="mb-3">Select Language</h6>
+                            <div class="d-flex justify-content-around">
+                                <button class="btn btn-outline-light" id="tr_modal">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/tr.svg" alt="Turkish" style="width: 24px;" class="me-2">Turkish
+                                </button>
+                                <button class="btn btn-outline-light" id="en_modal">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/us.svg" alt="English" style="width: 24px;" class="me-2">English
+                                </button>
+                                <button class="btn btn-outline-light" id="de_modal">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/de.svg" alt="Deutsch" style="width: 24px;" class="me-2">Deutsch
+                                </button>
+                                <button class="btn btn-outline-light" id="ru_modal">
+                                    <img src="https://flagicons.lipis.dev/flags/4x3/ru.svg" alt="Russian" style="width: 24px;" class="me-2">Russian
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <hr class="text-secondary">
-                    <!-- Currency Selection -->
-                    <div class="col-12">
-                        <h6 class="mb-3">Select Currency</h6>
-                        <div class="d-flex justify-content-around">
-                        <button class="btn btn-outline-light currency-modal" data-currency="USD">
-                            <i class="fas fa-dollar-sign me-2"></i>USD
-                        </button>
-                        <button class="btn btn-outline-light currency-modal" data-currency="EUR">
-                            <i class="fas fa-euro-sign me-2"></i>EUR
-                        </button>
-                        <button class="btn btn-outline-light currency-modal" data-currency="GBP">
-                            <i class="fas fa-pound-sign me-2"></i>GBP
-                        </button>
-                        <button class="btn btn-outline-light currency-modal" data-currency="TRY">
-                            <i class="fas fa-lira-sign me-2"></i>TRY
-                        </button>
+                        <hr class="text-secondary">
+                        <!-- Currency Selection -->
+                        <div class="col-12">
+                            <h6 class="mb-3">Select Currency</h6>
+                            <div class="d-flex justify-content-around">
+                                <button class="btn btn-outline-light currency-modal" data-currency="USD">
+                                    <i class="fas fa-dollar-sign me-2"></i>USD
+                                </button>
+                                <button class="btn btn-outline-light currency-modal" data-currency="EUR">
+                                    <i class="fas fa-euro-sign me-2"></i>EUR
+                                </button>
+                                <button class="btn btn-outline-light currency-modal" data-currency="GBP">
+                                    <i class="fas fa-pound-sign me-2"></i>GBP
+                                </button>
+                                <button class="btn btn-outline-light currency-modal" data-currency="TRY">
+                                    <i class="fas fa-lira-sign me-2"></i>TRY
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-navbar w-100">
-    <div class="container">
-        <!-- Logo and Site Title -->
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <img src="upload/250407224040.215.png" alt="Logo" class="logo me-2">
-            <span>ZekaBoost</span>
-        </a>
-        
-        <!-- Mobile Menu Button -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-navbar w-100">
+        <div class="container">
+            <!-- Logo and Site Title -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="upload/250407224040.215.png" alt="Logo" class="logo me-2">
+                <span>ZekaBoost</span>
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Game Selector -->
-            <div class="nav-item dropdown game-selector me-3 mb-2 mb-lg-0">
-                <button class="btn dropdown-toggle d-flex align-items-center w-100" type="button" data-bs-toggle="dropdown">
-                    <svg style="width: 1.3rem; height: 1.3rem;" viewBox="0 0 15 15" fill="evenodd" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0C7.77614 0 8 0.223858 8 0.5V1.80687C10.6922 2.0935 12.8167 4.28012 13.0068 7H14.5C14.7761 7 15 7.22386 15 7.5C15 7.77614 14.7761 8 14.5 8H13.0068C12.8167 10.7199 10.6922 12.9065 8 13.1931V14.5C8 14.7761 7.77614 15 7.5 15C7.22386 15 7 14.7761 7 14.5V13.1931C4.30782 12.9065 2.18334 10.7199 1.99316 8H0.5C0.223858 8 0 7.77614 0 7.5C0 7.22386 0.223858 7 0.5 7H1.99316C2.18334 4.28012 4.30782 2.0935 7 1.80687V0.5C7 0.223858 7.22386 0 7.5 0ZM7.5 3C5.01472 3 3 5.01472 3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3Z" fill="white"/>
-                    </svg>
-                    <span class="ms-2">Select Game</span>
-                </button>
-                <div class="dropdown-menu p-2" style="width: 300px; background: rgba(17, 21, 42, 0.95); backdrop-filter: blur(10px);">
-                    <!-- Active Games -->
-                    <h6 class="dropdown-header">Active Games</h6>
-                    <div class="d-flex flex-wrap gap-2 mb-3">
-                        <a href="lol-rank-boost.html" class="game-item active">
-                            <img src="assets/images/logos/league-of-legends.webp" alt="LoL" width="32">
-                            <span>League of Legends</span>
-                        </a>
-                        <a href="valorant-rank-boost.html" class="game-item">
-                            <img src="assets/images/logos/valorant.webp" alt="Valorant" width="32">
-                            <span>Valorant</span>
-                        </a>
-                    </div>
-                    
-                    <!-- Coming Soon Games -->
-                    <h6 class="dropdown-header">Coming Soon</h6>
-                    <div class="d-flex flex-wrap gap-2">
-                        <div class="game-item disabled">
-                            <img src="assets/images/logos/cs2.webp" alt="CS2" width="32">
-                            <span>CS2</span>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Game Selector -->
+                <div class="nav-item dropdown game-selector me-3 mb-2 mb-lg-0">
+                    <button class="btn dropdown-toggle d-flex align-items-center w-100" type="button" data-bs-toggle="dropdown" id="gameDropdown">
+                        <svg style="width: 1.3rem; height: 1.3rem;" viewBox="0 0 15 15" fill="evenodd" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0C7.77614 0 8 0.223858 8 0.5V1.80687C10.6922 2.0935 12.8167 4.28012 13.0068 7H14.5C14.7761 7 15 7.22386 15 7.5C15 7.77614 14.7761 8 14.5 8H13.0068C12.8167 10.7199 10.6922 12.9065 8 13.1931V14.5C8 14.7761 7.77614 15 7.5 15C7.22386 15 7 14.7761 7 14.5V13.1931C4.30781 12.9065 2.18326 10.7199 1.99316 8H0.5C0.223858 8 0 7.77614 0 7.5C0 7.22386 0.223858 7 0.5 7H1.99316C2.18326 4.28012 4.30781 2.0935 7 1.80687V0.5C7 0.223858 7.22386 0 7.5 0ZM7.5 3C5.01472 3 3 5.01472 3 7.5C3 9.98528 5.01472 12 7.5 12C9.98528 12 12 9.98528 12 7.5C12 5.01472 9.98528 3 7.5 3Z" fill="white"/>
+                        </svg>
+                        <span class="ms-2">Select Game</span>
+                    </button>
+                    <div class="dropdown-menu p-2" style="width: 300px; background: rgba(17, 21, 42, 0.95); backdrop-filter: blur(10px);">
+                        <!-- Active Games -->
+                        <h6 class="dropdown-header">Active Games</h6>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <a href="lol-rank-boost.html" class="game-item active">
+                                <img src="assets/images/logos/league-of-legends.webp" alt="LoL" width="32">
+                                <span>League of Legends</span>
+                            </a>
+                            <a href="valorant-rank-boost.html" class="game-item">
+                                <img src="assets/images/logos/valorant.webp" alt="Valorant" width="32">
+                                <span>Valorant</span>
+                            </a>
                         </div>
-                        <div class="game-item disabled">
-                            <img src="assets/images/logos/dota2.webp" alt="Dota 2" width="32">
-                            <span>Dota 2</span>
-                        </div>
-                        <div class="game-item disabled">
-                            <img src="assets/images/logos/teamfight-tactics.webp" alt="TFT" width="32">
-                            <span>Team Tactics</span>
-                        </div>
-                        <div class="game-item disabled">
-                            <img src="assets/images/logos/roblox.webp" alt="Roblox" width="32">
-                            <span>Roblox</span>
+                        
+                        <!-- Coming Soon Games -->
+                        <h6 class="dropdown-header">Coming Soon</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <div class="game-item disabled">
+                                <img src="assets/images/logos/cs2.webp" alt="CS2" width="32">
+                                <span>CS2</span>
+                            </div>
+                            <div class="game-item disabled">
+                                <img src="assets/images/logos/dota2.webp" alt="Dota 2" width="32">
+                                <span>Dota 2</span>
+                            </div>
+                            <div class="game-item disabled">
+                                <img src="assets/images/logos/teamfight-tactics.webp" alt="TFT" width="32">
+                                <span>Team Tactics</span>
+                            </div>
+                            <div class="game-item disabled">
+                                <img src="assets/images/logos/roblox.webp" alt="Roblox" width="32">
+                                <span>Roblox</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Main Menu -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link py-2" href="boost-services.html">Boost Services</a></li>
+                    <li class="nav-item"><a class="nav-link py-2" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link py-2" href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- Right Menu -->
+                <ul class="navbar-nav align-items-center gap-3">
+                    <!-- Login Button -->
+                    <li class="nav-item">
+                        <button class="btn custom-btn login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fas fa-user-circle me-2"></i>
+                            <span>Login</span>
+                        </button>
+                    </li>
+                
+                    <!-- All Games Button -->
+                    <li class="nav-item">
+                        <a href="boost-services.html" class="btn custom-btn games-btn">
+                            <i class="fas fa-gamepad me-2"></i>
+                            <span>All Games</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Main Menu -->
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link py-2" href="boost-services.html">Boost Services</a></li>
-                <li class="nav-item"><a class="nav-link py-2" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link py-2" href="contact.html">Contact</a></li>
-            </ul>
-
-            <!-- Right Menu -->
-            <ul class="navbar-nav align-items-center gap-3">
-                <!-- Login Button -->
-                <li class="nav-item">
-                    <button class="btn custom-btn login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        <i class="fas fa-user-circle me-2"></i>
-                        <span>Login</span>
-                    </button>
-                </li>
-            
-                <!-- Language/Currency Selector -->
-                <li class="nav-item">
-                    <button class="btn custom-btn settings-btn" id="openModalBtn">
-                        <i class="fas fa-globe me-2"></i>
-                        <i class="fas fa-dollar-sign"></i>
-                    </button>
-                </li>
-            
-                <!-- All Games Button -->
-                <li class="nav-item">
-                    <a href="boost-services.html" class="btn custom-btn games-btn">
-                        <i class="fas fa-gamepad me-2"></i>
-                        <span>All Games</span>
-                    </a>
-                </li>
-            </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
 <!-- Hero Section with Carousel -->
 <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
@@ -684,12 +454,6 @@ $(document).ready(function() {
     // Scroll to top when button is clicked
     document.getElementById('scrollToTop').addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Show Language and Currency Modal
-    document.getElementById('openModalBtn').addEventListener('click', function() {
-        var selectionModal = new bootstrap.Modal(document.getElementById('selectionModal'));
-        selectionModal.show();
     });
 </script>
 
