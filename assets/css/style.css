@@ -1,0 +1,1494 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: #ffffff;
+}
+
+/*
+
+.scroll-section {
+    position: relative;
+    background-color: rgba(13, 17, 23, 0.95);
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.scroll-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.scroll-row {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(0); 
+}
+
+.scroll-row div {
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #fff;
+    padding: 8px;
+    border-radius: 15px;
+    min-width: 200px;
+    max-width: 350px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.scroll-row div .avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.scroll-row div .avatar-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.scroll-row div .avatar-container .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-row div .avatar-container .info h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00f260;
+}
+
+.scroll-row div .avatar-container .info span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.scroll-row div .testimonial-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+    word-wrap: break-word; 
+}
+
+.scroll-row div .stars {
+    margin-top: auto;
+    color: #FFD700;
+}
+
+
+.scroll-section::before,
+.scroll-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(to right, rgba(13, 17, 23, 1), rgba(13, 17, 23, 0));
+    z-index: 1;
+}
+
+.scroll-section::after {
+    right: 0;
+    left: auto;
+    transform: rotateY(180deg);
+}
+
+.scroll-section::before {
+    left: 0;
+}
+
+
+
+.scroll-row.left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.scroll-row.right {
+    animation: scrollRight 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+
+.scroll-row.left {
+    animation: scrollLeft 20s linear infinite;
+}
+
+.scroll-row.right {
+    margin-top: 25px;
+    animation: scrollRight 20s linear infinite;
+}
+
+.scroll-row:hover {
+    animation-play-state: paused;
+}
+
+*/
+
+.sticky-navbar {
+position: sticky;
+top: 0;
+z-index: 1030;
+background-color: rgba(13, 17, 23, 0.95); /* Ensures a visible background */
+transition: background-color 0.3s ease-in-out;
+}
+
+.sticky-navbar.scrolled {
+background-color: rgba(13, 17, 23, 1); /* Solid background on scroll */
+}
+
+
+/* Scroll-to-Top Button */
+#scrollToTop {
+position: fixed;
+bottom: 20px;
+right: 20px;
+display: none;
+z-index: 1000;
+background: #0d6efd;
+color: #fff;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+text-align: center;
+line-height: 50px;
+font-size: 20px;
+cursor: pointer;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+transition: background 0.3s ease-in-out;
+}
+
+#scrollToTop:hover {
+background: #0046a1;
+}
+
+
+
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+
+.navbar {
+    z-index: 10;
+}
+
+.hero-section, #heroSlider .carousel-inner img {
+    height: 80vh;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 15px;
+}
+
+.hero-section .btn-info {
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-info:hover {
+    transform: scale(1.1);
+}
+
+.hero-section .btn-outline-light {
+    color: #ffffff;
+    border-color: #ffffff;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #0d1117;
+}
+
+/* Features Section */
+.features-section {
+    background: #121212;
+    padding: 50px 0;
+}
+
+.features-section .feature-card {
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.features-section .feature-card:hover {
+    transform: scale(1.05);
+}
+
+/* Boosting Services Section */
+.boosting-services-section .service-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Diğer alanlarda animasyon çalışırken .service-img-blur sınıfına sahip görsellerde animasyonu devre dışı bırak */
+.boosting-services-section .service-img:hover:not(.service-img-blur) {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.3);
+}
+
+.service-img-blur-container .service-img-blur:hover {
+    transform: none;
+    box-shadow: none;
+    filter: blur(3px) brightness(0.7);
+}
+
+.boosting-services-section h2 {
+    color: #ffffff;
+}
+
+.boosting-services-section .service-img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boosting-services-section .service-img:hover {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    filter: brightness(1.3);
+}
+
+/* Glowing Border Effect */
+.boosting-services-section .service-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(0, 128, 255, 0.3));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.boosting-services-section .service-img:hover::before {
+    opacity: 1;
+}
+
+.boosting-services-section h6 {
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background: #1e1e1e;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.reviews-section .carousel-control-prev-icon,
+.reviews-section .carousel-control-next-icon {
+    background-color: #0575e6;
+}
+
+/* FAQ Section */
+/*
+.faq-section {
+    background-color: #0d1117;
+    padding: 50px 0;
+}
+
+.faq-section .accordion-button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.faq-section .accordion-button:focus {
+    box-shadow: none;
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+    color: #00f260;
+    background-color: #1e1e1e;
+}
+
+.faq-section .accordion-item {
+    border: none;
+} */
+
+/*
+
+.blog-section {
+    background-color: #13161d;
+    padding: 50px 0;
+}
+
+.blog-section .card {
+    background-color: #1e1e1e;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.blog-section .card:hover {
+    transform: scale(1.05);
+}
+
+.blog-section .card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blog-image {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
+*/
+
+/* Contact Section */
+.contact-section {
+  /*  background: #1e1e1e;*/
+    padding: 50px 0;
+}
+
+.contact-section .btn-primary {
+    background: #0575e6;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+    background: #00f260;
+    color: #0d1117;
+}
+
+/* Footer */
+.footer-section {
+    background-color: #13161d;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.footer-section a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #00f260;
+}
+
+.footer-section i {
+    font-size: 1.2rem;
+    margin: 0 10px;
+}
+
+.footer-section i:hover {
+    color: #00f260;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .hero-section .btn-info,
+    .hero-section .btn-outline-light {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Bulanıklaştırma ve Gölgeli Efekt Yalnızca .service-img-blur İçin */
+.service-img-blur-container {
+    position: relative;
+}
+
+.service-img-blur {
+    filter: blur(3px) brightness(0.7);
+    pointer-events: none; /* Hover efektlerini devre dışı bırakmak için */
+}
+
+.service-img-blur-container .service-img-blur-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none; /* Hover veya tıklamayı engellemek için */
+}
+
+.testimonials-section {
+    background-color: #1e1e1e;
+}
+
+.testimonial {
+    padding: 20px;
+}
+
+.testimonial-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+}
+
+
+/* Sayfalama Stil Ayarları */
+.custom-pagination .page-link {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #343a40;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-pagination .page-link:hover {
+    background-color: #343a40;
+    color: #00f260;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #00f260;
+    border-color: #00f260;
+    color: #0d1117;
+}
+
+.custom-pagination .page-item.disabled .page-link {
+    background-color: #343a40;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+
+.application-form-section {
+    padding-top: 1250px;
+    background-color: #0d1117;
+}
+
+.application-form {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.custom-input {
+    background-color: #1e1e1e;
+    color: #00f260;
+    border: 1px solid #343a40;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.custom-input::placeholder {
+    color: #6c757d;
+}
+
+.btn-apply {
+    background: linear-gradient(45deg, #00f260, #0575e6);
+    border: none;
+    transition: all 0.3s ease;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.btn-apply:hover {
+    background: #00c851;
+    transform: scale(1.02);
+}
+
+
+.about-us-section {
+    background-color: #0d1117; /* Match the dark theme background color */
+    color: #ffffff; /* Ensure text is white for readability */
+    padding: 50px 0;
+}
+
+
+.services-section {
+    background-color: #13161d; /* Match the dark theme background color */
+    color: #ffffff; /* Ensure text is white for readability */
+    padding: 50px 0;
+}
+
+
+
+.highlighted-services {
+    background-color: #13161d; /* Match the dark theme background color */
+    color: #ffffff; /* Ensure text is white for readability */
+    padding: 50px 0;
+}
+
+/* Set opacity for slider images */
+#heroSlider .carousel-inner .carousel-item img {
+    filter: blur(8px); /* Bulanıklık efekti */
+    -webkit-filter: blur(8px); /* Safari için */
+    opacity: 0.2;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 12%; /* Adjust to position caption within the slider */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 100%; /* Ensures the caption takes full width */
+    text-align: center;
+    padding: 10px;
+  /*  background: rgba(0, 0, 0, 0.6); */ /* Semi-transparent background for readability */
+}
+
+/* Navbar background for mobile screens */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #13161d; /* Dark background color for mobile menu */
+        padding: 10px;
+    }
+
+    .navbar .nav-link, 
+    .navbar .dropdown-item {
+        color: #ffffff !important; /* Ensure text is visible on dark background */
+    }
+
+    .navbar .dropdown-menu {
+        background-color: #13161d; /* Dark background for dropdown */
+    }
+}
+
+/* Stack services icons on mobile screens */
+@media (max-width: 768px) {
+    .services-icons-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-icons-section .text-center {
+        margin-bottom: 20px; /* Add spacing between icons */
+    }
+
+    /* Ensure buttons and other elements do not overlap */
+    .hero-section h1, .carousel-caption h1 {
+        font-size: 2rem; /* Adjust size on mobile */
+    }
+
+    .hero-section .btn-info,
+    .hero-section .btn-outline-light {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+     /* Adjust caption position and background */
+     #heroSlider .carousel-caption {
+        position: absolute;
+        bottom: 12%; /* Slightly higher to prevent overlap with other elements */
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.6); /* Increase opacity for better text contrast */
+    }
+
+    /* Font size and margin adjustments */
+    #heroSlider .carousel-caption h1 {
+        font-size: 1.6rem; /* Smaller font for mobile */
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    #heroSlider .carousel-caption p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    /* Button styling adjustments */
+    #heroSlider .carousel-caption .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        margin: 5px;
+        width: auto; /* Adjust button width */
+        max-width: 240px; /* Prevent excessive width */
+    }
+
+    /* Align buttons within container */
+    .carousel-caption .d-flex {
+        flex-direction: row;
+        gap: 10px; /* Add spacing between buttons */
+    }
+    
+
+    /* Navbar logo size adjustment */
+    .navbar-brand img.logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Adjust the Hero Slider Text for mobile */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 1.6rem; /* Reduce size on mobile */
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+
+    .carousel-caption p {
+        font-size: 1rem;
+        margin: 8px 0;
+    }
+
+    .carousel-caption .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+        margin: 5px;
+        max-width: 240px; /* Prevent buttons from stretching too wide */
+    }
+
+    /* Stack buttons vertically on smaller screens */
+    .carousel-caption .d-flex {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Adjustments for Extra Small Screens */
+@media (max-width: 576px) {
+    #heroSlider .carousel-caption h1 {
+        font-size: 1.4rem;
+    }
+
+    #heroSlider .carousel-caption p {
+        font-size: 0.85rem;
+    }
+
+    #heroSlider .carousel-caption .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    /* Navbar adjustments */
+    .navbar-collapse {
+        padding: 5px;
+    }
+}
+
+/* Varsayılan Container Genişlik Ayarları */
+.container {
+    width: 100%; /* Tam genişlik */
+    margin: 0 auto; /* Ortala */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Section Container */
+.section-container {
+    margin: 20px auto; /* Daha düzgün hizalama */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Geniş Ekranlar İçin Max-Width Ayarı */
+@media (min-width: 1400px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1800px; /* Geniş ekranlar için genişliği 1800px yap */
+    }
+}
+
+
+
+/*
+.scroll-section {
+    position: relative;
+    background-color: rgba(13, 17, 23, 0.95);
+    padding: 60px 20px;
+    margin: 0 auto;
+    max-width: 85%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.scroll-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.scroll-row {
+    display: flex;
+    gap: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(0); 
+}
+
+.scroll-row div {
+    background-color: rgba(26, 26, 26, 0.9);
+    color: #fff;
+    padding: 8px;
+    border-radius: 15px;
+    min-width: 200px;
+    max-width: 350px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+}
+
+.scroll-row div .avatar-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.scroll-row div .avatar-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.scroll-row div .avatar-container .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.scroll-row div .avatar-container .info h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #00f260;
+}
+
+.scroll-row div .avatar-container .info span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.scroll-row div .testimonial-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+    word-wrap: break-word; 
+}
+
+.scroll-row div .stars {
+    margin-top: auto;
+    color: #FFD700;
+}
+
+.scroll-section::before,
+.scroll-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    background: linear-gradient(to right, rgba(13, 17, 23, 1), rgba(13, 17, 23, 0));
+    z-index: 1;
+}
+
+.scroll-section::after {
+    right: 0;
+    left: auto;
+    transform: rotateY(180deg);
+}
+
+.scroll-section::before {
+    left: 0;
+}
+
+
+
+.scroll-row.left {
+    animation: scrollLeft 30s linear infinite;
+}
+
+.scroll-row.right {
+    animation: scrollRight 30s linear infinite;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%); 
+    }
+}
+
+
+.scroll-row.left {
+    animation: scrollLeft 50s linear infinite;
+}
+
+.scroll-row.right {
+    margin-top: 25px;
+    animation: scrollRight 50s linear infinite;
+}
+
+.scroll-row:hover {
+    animation-play-state: paused;
+}
+
+*/
+
+.rank-icon {
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    margin: 5px;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+.rank-icon.selected {
+    opacity: 1;
+}
+.game-selection img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    margin: 10px;
+}
+.game-selection img.selected {
+    border: 2px solid #0575e6;
+    border-radius: 8px;
+}
+.boost-type a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.boost-type a:hover, .boost-type a.selected {
+    background-color: #0575e6;
+}
+.division-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin: 5px;
+    color: #fff;
+}
+.division-btn.selected {
+    background-color: #0575e6; /* Koyu Mavi */
+    color: #fff;
+}
+.extra-options {
+    position: sticky;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+}
+
+
+.rank-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 5px; /* Minimal gap between icons */
+}
+
+.rank-icon-wrapper {
+    width: 10%; /* Reduced size */
+    height: 10%; /* Same as width */
+    margin: 2px; /* Minimized margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.rank-icon {
+    width: 35px; /* Slightly smaller icons */
+    height: 35px;
+    transition: opacity 0.3s;
+}
+
+.rank-icon-wrapper.selected {
+    border-color: #0575e6;
+    transform: scale(1.1);
+}
+
+.section-container {
+    padding: 15px; /* Reduced padding */
+}
+
+.rank-selection-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 5px; /* Reduced spacing */
+    text-align: left; /* Align title to the left */
+}
+
+
+.lp-select {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    width: 48%; /* Yan yana düzgün görünmesi için genişlik */
+    padding: 5px;
+}
+
+.lp-select:focus {
+    outline: none;
+    border-color: #0575e6; /* Seçildiğinde yeşil vurgu */
+    box-shadow: 0 0 5px rgba(0, 242, 96, 0.5);
+}
+
+.division-btn-group {
+    display: flex;
+    justify-content: flex-start; /* Sol hizalama */
+    gap: 10px; /* Butonlar arasındaki boşluk */
+    margin-top: 10px;
+}
+
+.division-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.division-btn.selected {
+    background-color: #0575e6;
+    color: #000000;
+    border-color: #0575e6;
+}
+
+.division-btn:hover {
+    background-color: #0575e6;
+    color: #ffffff;
+}
+
+.lp-select, .form-select {
+    background-color: rgba(255, 255, 255, 0.1); /* Arka plan rengi */
+    color: #ffffff; /* Yazı rengi */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Kenarlık */
+}
+
+.lp-select option, .form-select option {
+    background-color: rgba(0, 0, 0, 0.8); /* Dropdown arka plan rengi */
+    color: #ffffff; /* Dropdown yazı rengi */
+}
+
+
+
+/* Accordion düğme arka plan ve kenarlık */
+.accordion-button {
+    background-color: #161b22; /* Koyu tema arka plan */
+    color: #c9d1d9; /* Açık metin rengi */
+    border: none; /* Kenarlıkları kaldır */
+    box-shadow: none; /* Gölgeyi kaldır */
+    border-radius: 6px; /* Köşeleri yuvarla */
+}
+
+/* Accordion düğmesi hover ve açık durum */
+.accordion-button:not(.collapsed) {
+    background-color: #1e1e1e; /* Daha koyu arka plan */
+    color: #ffffff; /* Beyaz metin */
+}
+
+.accordion-button:hover {
+    background-color: #20232a; /* Hover durumu için */
+    color: #ffffff;
+}
+
+/* Accordion gövde (body) stili */
+.accordion-body {
+    background-color: #0d1117; /* Koyu tema arka plan */
+    color: #c9d1d9; /* Açık metin rengi */
+    border: none; /* Kenarlıkları kaldır */
+    border-radius: 6px; /* Köşeleri yuvarla */
+    padding: 15px; /* İçerik boşluğu */
+}
+
+/* Accordion item kenarlık ve boşluk ayarları */
+.accordion-item {
+    background-color: #0d1117; /* Arka plan rengini aynı tut */
+    border: none; /* Kenarlıkları kaldır */
+}
+
+/* Genel kenarlık ve beyaz alanları kaldır */
+.accordion {
+    background-color: #0d1117; /* Tüm accordion arka planı */
+    border: none; /* Kenarlıkları kaldır */
+}
+
+
+
+
+
+
+
+.blog-slider-section {
+    background-color: #161b22;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.slider-item {
+    min-width: 300px;
+    max-width: 300px;
+    flex-shrink: 0;
+    background-color: #2c2f33;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-img {
+    max-width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.slider-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.slider-description {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.4;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.blog-detail-section {
+    padding: 50px 0;
+}
+
+.blog-detail-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-detail-content {
+    flex: 2;
+}
+
+.blog-detail-image {
+    flex: 1;
+    text-align: center;
+}
+
+.blog-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-detail-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.blog-detail-meta {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.blog-detail-content p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.blog-tags {
+    margin-top: 20px;
+}
+
+.blog-tags button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px 5px 0 0;
+    cursor: pointer;
+}
+
+.blog-tags button:hover {
+    background-color: #0056b3;
+}
+
+/* Slider stili */
+.blog-slider {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-slider h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+}
+
+.slider-item {
+    min-width: 250px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+.slider-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.slider-item h5 {
+    font-size: 16px;
+    color: #333;
+}
+
+
+.blog-slider {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #161b22;
+    border-radius: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
+
+.blog-slider h3 {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.slider-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+}
+
+.slider-item {
+    min-width: 220px;
+    max-width: 220px;
+    flex-shrink: 0;
+    border-radius: 8px;
+   
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.slider-item h5 {
+font-size: 14px;
+margin-bottom: 10px;
+color: #fff;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap; /* Tek satır yap */
+max-height: 20px; /* Yüksekliği sabitle */
+line-height: 1.4;
+display: block; /* Blok yapısı */
+}
+
+
+.slider-item img {
+    max-width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+.slider-item h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.slider-description {
+    font-size: 12px;
+    color: #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.slider-item .btn {
+    margin-top: auto;
+    font-size: 12px;
+}
+
+/* Scroll Hide */
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.accordion-button {
+    background-color: rgba(255, 255, 255, 0.1); /* Butonun arka plan rengini ayarlayın */
+    color: #ffffff; /* Yazı rengini beyaz yap */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Dış çerçeve rengi */
+    border-radius: 5px; /* Köşeleri yuvarla */
+    transition: all 0.3s ease; /* Hover ve tıklama efektleri için */
+}
+
+.accordion-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover arka plan efekti */
+    color: #0575e6; /* Hover yazı rengi */
+    border-color: #0575e6; /* Hover çerçeve rengi */
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 10px #0575e6; /* Focus efekti */
+    border-color: #0575e6;
+}
+
+.accordion-button::after {
+    color: #ffffff; /* Ok tuşunun rengi */
+    font-size: 1rem; /* Boyut */
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: rotate(180deg); /* Açık olduğunda oku ters çevir */
+}
+
+.accordion-item {
+    margin-bottom: 10px; /* Elemanlar arasında boşluk */
+}
+
+.accordion-body {
+    background-color: rgba(255, 255, 255, 0.05); /* Gövde arka plan rengi */
+    color: #ffffff; /* Gövde yazı rengi */
+    border-radius: 5px; /* Gövde köşeleri yuvarla */
+    padding: 15px; /* İçerik aralığı */
+    transition: all 0.3s ease; /* Açılma/kapanma animasyonu */
+}
+
+
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 8px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #0575e6;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.extra-options-container {
+    display: none;
+}
+
+.extra-options-container.active {
+    display: block;
+}
+
+
+
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #0575e6;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.steps-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.steps-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
